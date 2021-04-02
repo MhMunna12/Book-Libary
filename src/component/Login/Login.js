@@ -17,7 +17,6 @@ const Login = () => {
 
     let { from } = location.state || { from: { pathname: "/" } };
     
-    // const [user,setUser] = useState({})
     const googleProvider = new firebase.auth.GoogleAuthProvider();
     const handleGoogleSignIn = () =>{
         firebase.auth().signInWithPopup(googleProvider)

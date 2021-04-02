@@ -8,9 +8,6 @@ const BookCheckOut = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const {bookId} = useParams();
     const [book,setBook] = useState({});
-    // const handleClick = () =>{
-    //     alert('checkout Successfully')
-    // }
     useEffect(()=>{
         fetch(`https://stormy-brushlands-24684.herokuapp.com/book/${bookId}`)
         .then(res => res.json())
