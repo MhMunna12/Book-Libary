@@ -1,0 +1,13 @@
+
+.side-bar{
+    background-color:#56776c;
+    min-height: 450px;
+}
+.side-bar button{
+    background-color:#56776c;
+    border-color:none;
+}
+.side-bar h4{
+    color:white;
+    margin-left: 5px;
+}

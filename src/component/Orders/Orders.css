@@ -1,0 +1,19 @@
+.table-tr{
+    background-color: #ccffbd;
+    padding: 10px;
+}
+
+.order-area{
+    background-color: rgb(236, 233, 233);
+    
+}
+.order-container h3{
+    margin: 5px;
+}
+.order-container{
+    background-color:#dbf6e9;
+    border-radius: 10px;
+    width: 90%;
+    margin:0px 50px;
+    padding: 10px;
+}

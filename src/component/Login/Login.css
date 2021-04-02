@@ -1,0 +1,16 @@
+.google{
+    margin-left: 450px;
+    height:250px;
+    margin-top: 120px;
+    border: 1px solid purple;
+    width:350px;
+    background-color:lightcyan;
+}
+.login-button{
+    border: none;
+    margin-left: 85px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    padding:5px
+}
