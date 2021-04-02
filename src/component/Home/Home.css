@@ -1,3 +1,8 @@
 body{
-    background-color: rgb(156, 245, 236);
+    background-color: #f3f4ed;
+}
+.loading-spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }

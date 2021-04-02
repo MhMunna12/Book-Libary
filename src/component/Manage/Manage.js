@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Spinner, Table } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import './Manage.css';
 
 const Manage = () => {
     const [books,setBooks] = useState([]);
+    const [loading, setLoading] = useState(true);
     const handleDelete = (id) =>{
         fetch(`https://stormy-brushlands-24684.herokuapp.com/deleteBook/${id}`,{
             method:'DELETE',
@@ -21,12 +22,17 @@ const Manage = () => {
     useEffect(()=>{
         fetch('https://stormy-brushlands-24684.herokuapp.com/books')
         .then(res => res.json())
-        .then(data =>setBooks(data))
+        .then(data =>{
+            setBooks(data)
+            setLoading(false)
+        })
     },[])
     return (
         <div className="manage-container">
             <h3>Manage Product</h3>
-            <div className="manage-area">
+            {
+                loading ? <Spinner className="loading-spinner" animation="border" variant="dark" /> : 
+                <div className="manage-area">
                 <Table  hover size="sm">
                     <thead>
                         <tr className="table-tr">
@@ -48,6 +54,7 @@ const Manage = () => {
                     </tbody>
                 </Table>
             </div>
+            }
         </div>
     );
 };
